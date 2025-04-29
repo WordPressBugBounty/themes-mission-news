@@ -5,12 +5,12 @@ Theme URI: https://www.competethemes.com/mission-news/
 Author: Compete Themes
 Author URI: https://www.competethemes.com/
 Description: For publishers on a mission. Mission News is a newspaper theme for publishers who want their content to be seen and heard. Premium-quality design adds credibility to every word you write, and a fully responsive layout ensures your site looks fantastic on every screen. The aesthetic is timeless and modeled after classic news sites like the New York Times. Use Mission News to setup a news site on any subject from health to finance. Mission News is also fully compatible with the new Gutenberg post editor. View the fully-setup live demo here: https://www.competethemes.com/demos/?theme=Mission+News
-Version: 1.63
+Version: 1.64
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: three-columns, left-sidebar, right-sidebar, custom-logo, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, news
 Text Domain: mission-news
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.4
 
 Mission News WordPress Theme, Copyright 2025 Compete Themes
@@ -567,18 +567,18 @@ a img {
   left: 0;
 }
 
-.entry.double .sticky-status,
-.entry.double.small .sticky-status {
+.loop-container .entry.double .sticky-status,
+.loop-container .entry.double.small .sticky-status {
   top: 12px;
 }
 
-body:not(.small-first-post) .entry.double:nth-child(odd) .sticky-status,
-body:not(.small-first-post) .entry.double.small:nth-child(odd) .sticky-status {
+body:not(.small-first-post) .loop-container .entry.double:nth-child(odd) .sticky-status,
+body:not(.small-first-post) .loop-container .entry.double.small:nth-child(odd) .sticky-status {
   left: 12px;
 }
 
-body.small-first-post .entry.double:nth-child(even) .sticky-status,
-body.small-first-post .entry.double.small:nth-child(even) .sticky-status {
+body.small-first-post .loop-container .entry.double:nth-child(even) .sticky-status,
+body.small-first-post .loop-container .entry.double.small:nth-child(even) .sticky-status {
   left: 12px;
 }
 
@@ -3204,15 +3204,15 @@ body.small-first-post .entry.double.small:nth-child(even) .sticky-status {
     /* 24px */
   }
 }
-.blog.layout-double:not(.bbpress) .double,
-.archive.layout-double:not(.bbpress) .double,
-.search.layout-double:not(.bbpress) .double {
+.blog.layout-double:not(.bbpress) .loop-container .double,
+.archive.layout-double:not(.bbpress) .loop-container .double,
+.search.layout-double:not(.bbpress) .loop-container .double {
   margin-bottom: 0.75em;
   padding-bottom: 0.75em;
 }
-.blog.layout-double:not(.bbpress) .double .post-header,
-.archive.layout-double:not(.bbpress) .double .post-header,
-.search.layout-double:not(.bbpress) .double .post-header {
+.blog.layout-double:not(.bbpress) .loop-container .double .post-header,
+.archive.layout-double:not(.bbpress) .loop-container .double .post-header,
+.search.layout-double:not(.bbpress) .loop-container .double .post-header {
   margin-bottom: 0;
 }
 
@@ -3223,9 +3223,9 @@ body.small-first-post .entry.double.small:nth-child(even) .sticky-status {
     border-bottom: none;
     padding-bottom: 0;
   }
-  .blog.layout-double:not(.bbpress) .double,
-.archive.layout-double:not(.bbpress) .double,
-.search.layout-double:not(.bbpress) .double {
+  .blog.layout-double:not(.bbpress) .loop-container .double,
+.archive.layout-double:not(.bbpress) .loop-container .double,
+.search.layout-double:not(.bbpress) .loop-container .double {
     width: 50%;
     float: left;
     border-bottom: none;
@@ -3233,38 +3233,38 @@ body.small-first-post .entry.double.small:nth-child(even) .sticky-status {
     padding: 0.75em 0;
     margin: 0;
   }
-  .blog.layout-double:not(.bbpress) .double .post-title,
-.archive.layout-double:not(.bbpress) .double .post-title,
-.search.layout-double:not(.bbpress) .double .post-title {
+  .blog.layout-double:not(.bbpress) .loop-container .double .post-title,
+.archive.layout-double:not(.bbpress) .loop-container .double .post-title,
+.search.layout-double:not(.bbpress) .loop-container .double .post-title {
     font-size: 1.125em;
     /* 18px / 16px */
     line-height: 1.333;
     /* 24px */
   }
-  .blog.layout-double:not(.bbpress).small-first-post .double:nth-of-type(even),
-.archive.layout-double:not(.bbpress).small-first-post .double:nth-of-type(even),
-.search.layout-double:not(.bbpress).small-first-post .double:nth-of-type(even) {
+  .blog.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(even),
+.archive.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(even),
+.search.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(even) {
     padding-left: 0.75em;
     margin-left: -1px;
     border-left: solid 1px #DCDCDC;
   }
-  .blog.layout-double:not(.bbpress).small-first-post .double:nth-of-type(odd),
-.archive.layout-double:not(.bbpress).small-first-post .double:nth-of-type(odd),
-.search.layout-double:not(.bbpress).small-first-post .double:nth-of-type(odd) {
+  .blog.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(odd),
+.archive.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(odd),
+.search.layout-double:not(.bbpress).small-first-post .loop-container .double:nth-of-type(odd) {
     padding-right: 0.75em;
     clear: left;
     border-right: solid 1px #DCDCDC;
   }
-  .blog.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(odd),
-.archive.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(odd),
-.search.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(odd) {
+  .blog.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(odd),
+.archive.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(odd),
+.search.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(odd) {
     padding-left: 0.75em;
     margin-left: -1px;
     border-left: solid 1px #DCDCDC;
   }
-  .blog.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(even),
-.archive.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(even),
-.search.layout-double:not(.bbpress):not(.small-first-post) .double:nth-of-type(even) {
+  .blog.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(even),
+.archive.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(even),
+.search.layout-double:not(.bbpress):not(.small-first-post) .loop-container .double:nth-of-type(even) {
     padding-right: 0.75em;
     clear: left;
     border-right: solid 1px #DCDCDC;
